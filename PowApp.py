@@ -53,8 +53,8 @@ station_map = fo.Map(
 	location = [latitude, longitude], 
 	zoom_start = 10)
 
-latitudes = list(nan_sta.lat)
-longitudes = list(nan_sta.lon)
+latitudes = list(nan_sta.latstartl)
+longitudes = list(nan_sta.lonstartl)
 labels = list(nan_sta.name)
 
 for lat, lng, label in zip(latitudes, longitudes, labels):
