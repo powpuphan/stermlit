@@ -51,7 +51,7 @@ st.write("""
 """)
 
 st.pydeck_chart(pdk.Deck(
-     map_style='mapbox://styles/mapbox/light-v9',
+     map_style='mapbox://styles/mapbox/streets-v9',
      initial_view_state=pdk.ViewState(
         latitude=13.687455,
          longitude=100.536915,
@@ -63,6 +63,7 @@ st.pydeck_chart(pdk.Deck(
             'HexagonLayer',
             data=data,
             get_position='[lonstartl, latstartl]',
+            auto_highlight=True,
             radius=200,
             elevation_scale=4,
             elevation_range=[0, 1000],
