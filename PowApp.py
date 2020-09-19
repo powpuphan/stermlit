@@ -9,7 +9,9 @@ import altair as alt
 
 
 st.title('''
-Streamlit with Folium By Puphan Pornsilkiat 6030819321
+Puphan Pornsilkiat 6030819321
+
+Streamlit
 ''')
 
 df1 = pd.read_csv('https://raw.githubusercontent.com/Maplub/odsample/master/20190101.csv')
@@ -40,11 +42,11 @@ data = df
 
 DATE_TIME = "timestart"
 
-hour = st.slider("Hour to look at", 0, 23)
+hour = st.slider("At Hour", 0, 23)
 
 data = data[data[DATE_TIME].dt.hour == hour]
 
-st.subheader("Geo data between %i:00 and %i:00" % (hour, (hour + 1) % 24))
+st.subheader("Spatial data between %i:00 and %i:00" % (hour, (hour + 1) % 24))
 
 st.write("""
 # Map
