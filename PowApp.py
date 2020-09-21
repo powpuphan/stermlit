@@ -31,7 +31,7 @@ frames = [df1, df2, df3, df4, df5]
 df = pd.concat(frames)
 
 np.random.seed(10)
-remove_n = 20000
+remove_n = 200000
 drop_indices = np.random.choice(df.index, remove_n, replace=False)
 df_subset = df.drop(drop_indices)
 df = df_subset
